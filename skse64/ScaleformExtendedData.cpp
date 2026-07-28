@@ -328,7 +328,7 @@ namespace scaleformExtend
 					// Words
 					GFxValue words;
 					movieView->CreateArray(&words);
-					for(int i = 0; i < pShout->Words::kNumWords; i++)
+					for(int i = 0; i < TESShout::Words::kNumWords; i++)
 					{
 						GFxValue word;
 						movieView->CreateObject(&word);
