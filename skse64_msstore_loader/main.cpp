@@ -1,6 +1,6 @@
 #include <ShObjIdl_core.h>
 #include <ShlObj_core.h>
-#include <ObjIdl.h>
+#include <objidl.h>
 #include "skse64_loader_common/Inject.h"
 #include "skse64_loader_common/LoaderError.h"
 

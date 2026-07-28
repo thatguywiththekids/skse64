@@ -85,8 +85,8 @@ target_link_libraries(
 	PUBLIC
 		skse64::skse64_common
 		skse64::skse64_loader_common
-		Shlwapi.lib
-		Version.lib
+		shlwapi.lib
+		version.lib
 		xse::common
 )
 

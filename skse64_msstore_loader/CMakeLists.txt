@@ -79,7 +79,7 @@ target_link_libraries(
 	PUBLIC
 		skse64::skse64_common
 		skse64::skse64_loader_common
-		Version.lib
+		version.lib
 )
 
 # ---- Configure all targets ----
