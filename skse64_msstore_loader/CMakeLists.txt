@@ -59,6 +59,8 @@ add_executable(
 
 add_executable(skse64::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
+set_target_properties(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/MANIFESTUAC:\"level='requireAdministrator'\"")
+
 include(${CMAKE_CURRENT_SOURCE_DIR}/../cmake/configuration.cmake)
 
 target_compile_features(
