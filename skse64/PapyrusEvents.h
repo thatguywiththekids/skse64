@@ -192,7 +192,7 @@ public:
 	}
 
 	template <typename F>
-	void ForEach(K & key, F & functor)
+	void ForEach(const K & key, F&& functor)
 	{
 		this->Lock();
 
@@ -397,7 +397,7 @@ public:
 	}
 
 	template <typename F>
-	void ForEach(F & functor)
+	void ForEach(F&& functor)
 	{
 		this->Lock();
 

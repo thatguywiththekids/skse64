@@ -52,7 +52,7 @@ template <typename T1>
 class EventQueueFunctor1 : public IFunctionArguments
 {
 public:
-	EventQueueFunctor1(BSFixedString & a_eventName, T1 a_arg1)
+	EventQueueFunctor1(const BSFixedString & a_eventName, T1 a_arg1)
 		: eventName(a_eventName.data), arg1(a_arg1) {}
 
 	virtual bool	Copy(Output * dst)
@@ -78,7 +78,7 @@ template <typename T1, typename T2>
 class EventQueueFunctor2 : public IFunctionArguments
 {
 public:
-	EventQueueFunctor2(BSFixedString & a_eventName, T1 a_arg1, T2 a_arg2)
+	EventQueueFunctor2(const BSFixedString & a_eventName, T1 a_arg1, T2 a_arg2)
 		: eventName(a_eventName.data), arg1(a_arg1), arg2(a_arg2) {}
 
 	virtual bool	Copy(Output * dst)
@@ -106,7 +106,7 @@ template <typename T1, typename T2, typename T3, typename T4>
 class EventQueueFunctor4 : public IFunctionArguments
 {
 public:
-	EventQueueFunctor4(BSFixedString & a_eventName, T1 a_arg1, T2 a_arg2, T3 a_arg3, T4 a_arg4)
+	EventQueueFunctor4(const BSFixedString & a_eventName, T1 a_arg1, T2 a_arg2, T3 a_arg3, T4 a_arg4)
 		: eventName(a_eventName.data), arg1(a_arg1), arg2(a_arg2), arg3(a_arg3), arg4(a_arg4) {}
 
 	virtual bool	Copy(Output * dst)

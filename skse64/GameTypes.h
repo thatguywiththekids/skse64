@@ -521,7 +521,7 @@ private:
 	}
 
 	template <class Op>
-	UInt32 FreeNodes(Op &compareOp)
+	UInt32 FreeNodes(Op&& compareOp)
 	{
 		UInt32 numFreed = 0;
 
@@ -743,7 +743,7 @@ public:
 	}
 
 	template <class Op>
-	void Visit(Op& op, _Node* prev = NULL) const {
+	void Visit(Op&& op, _Node* prev = NULL) const {
 		const _Node* pCur = (prev) ? prev->next : Head();
 		bool bContinue = true;
 		while (pCur && bContinue) {
@@ -755,7 +755,7 @@ public:
 	}
 
 	template <class Op>
-	T * Find(Op& op) const
+	T * Find(Op&& op) const
 	{
 		const _Node* pCur = Head(); 
 
@@ -775,7 +775,7 @@ public:
 	}
 
 	template <class Op>
-	Iterator Find(Op& op, Iterator prev) const
+	Iterator Find(Op&& op, Iterator prev) const
 	{
 		Iterator curIt = (prev.End()) ? Begin() : ++prev;
 		bool bFound = false;
@@ -793,7 +793,7 @@ public:
 	}
 
 	template <class Op>
-	UInt32 CountIf(Op& op) const
+	UInt32 CountIf(Op&& op) const
 	{
 		UInt32 count = 0;
 		const _Node* pCur = Head();
@@ -844,13 +844,13 @@ public:
 	}
 
 	template <class Op>
-	UInt32 RemoveIf(Op& op)
+	UInt32 RemoveIf(Op&& op)
 	{
 		return FreeNodes(op);
 	}
 
 	template <class Op>
-	SInt32 GetIndexOf(Op& op)
+	SInt32 GetIndexOf(Op&& op)
 	{
 		SInt32 idx = 0;
 		const _Node* pCur = Head();
