@@ -144,5 +144,5 @@ set(headers
 	ScaleformValue.h
 	Serialization.h
 	Translation.h
-	gamethreads.h
+	GameThreads.h
 )
