@@ -2,7 +2,7 @@
 
 void * Runtime_DynamicCast(void * srcObj, const void * fromType, const void * toType);
 
-#define DYNAMIC_CAST(obj, from, to) ( ## to *) Runtime_DynamicCast((void*)(obj), RTTI_ ## from, RTTI_ ## to)
+#define DYNAMIC_CAST(obj, from, to) (to *) Runtime_DynamicCast((void*)(obj), RTTI_ ## from, RTTI_ ## to)
 
 extern const void * RTTI_AbsorbEffect;
 extern const void * RTTI_AbstractHeap;
