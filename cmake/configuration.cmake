@@ -9,6 +9,14 @@ if (MSVC)
 		/Zi	# Debug Information Format
 	)
 
+	if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+		target_compile_options(
+			${PROJECT_NAME}
+			PRIVATE
+				/clang:-fno-operator-names
+		)
+	endif()
+
 	target_compile_options(
 		${PROJECT_NAME}
 		PRIVATE
